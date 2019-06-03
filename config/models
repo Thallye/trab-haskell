@@ -2,3 +2,10 @@ Produto json
     nome      Text
     preco     Double
     qtEstoque Int
+    
+    
+Usuario json
+    nome    Text
+    email Text
+    senha Text
+    UniqueRestEmail email

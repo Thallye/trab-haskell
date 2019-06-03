@@ -1,2 +1,7 @@
 /produto  ProdutoR  OPTIONS POST
 /produtos ProdutosR GET
+
+
+
+/home       HomeR       OPTIONS     GET 
+

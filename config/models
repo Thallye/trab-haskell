@@ -9,3 +9,17 @@ Usuario json
     email Text
     senha Text
     UniqueRestEmail email
+    
+    
+Animal json
+    nome   Text
+    tipo   Text
+    raca   Text
+    sexo   Bool
+    idade  Int
+    
+    
+Doacoes json
+    nome   Text
+    valor  Double
+    dia    Day

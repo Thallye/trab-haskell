@@ -5,7 +5,7 @@ Produto json
     
     
 Usuario json
-    nome    Text
+    nome  Text
     email Text
     senha Text
     UniqueRestEmail email
@@ -15,7 +15,7 @@ Animal json
     nome   Text
     tipo   Text
     raca   Text
-    sexo   Bool
+    sexo   Text
     idade  Int
     
     

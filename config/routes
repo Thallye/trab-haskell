@@ -1,7 +1,12 @@
 /produto  ProdutoR  OPTIONS POST
 /produtos ProdutosR GET
 
-
-
 /home       HomeR       OPTIONS     GET 
+
+/login      LoginR      OPTIONS     GET POST
+/cadastro   CadastroR   OPTIONS     POST
+    
+/animal  AnimalR  OPTIONS POST
+/animais AnimaisR GET
+
 

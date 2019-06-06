@@ -4,7 +4,7 @@
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE TypeFamilies #-}
 {-# LANGUAGE QuasiQuotes #-}
-module Handler.Home where
+module Handler.Doacoes where
 
 import Import
 import Network.HTTP.Types
@@ -16,12 +16,7 @@ headers = do
     addHeader "Access-Control-Allow-Methods" "*"
     addHeader "Access-Control-Allow-Headers" "*"
 
-optionsHomeR :: Handler ()
-optionsHomeR = headers
+optionsDoacoesR :: Handler ()
+optionsDoacoesR = headers
 
 
-
-getHomeR :: Handler TypedContent
-getHomeR = do 
-    headers
-    sendStatusJSON ok200 (object [])

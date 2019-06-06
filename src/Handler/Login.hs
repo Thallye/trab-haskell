@@ -23,33 +23,35 @@ optionsLoginR :: Handler ()
 optionsLoginR = headers
 
 
-
 optionsCadastroR :: Handler ()
 optionsCadastroR = headers
 
---postLoginR :: Handler TypedContent
---postLoginR = do 
---    addHeader "Access-Control-Allow-Origin" "*"
---    usuario <- requireJsonBody :: Handler Usuario
---    usoid <- runDB $ insert usuario
---    sendStatusJSON created201 (object ["resp" .= usoid])
 
---postLogoutR :: Handler TypedContent
---postLogoutR = do 
---    addHeader "Access-Control-Allow-Origin" "*"
---    usuarios <- requireJsonBody :: Handler Login
---    pidout <- runDB $ insert produto 
---    sendStatusJSON created201 (object ["resp" .= pid])
-
-getLoginR :: Handler TypedContent
-getLoginR = do 
-    headers
-    usuarios <- runDB $ selectList [] [Asc UsuarioNome]
-    sendStatusJSON ok200 (object ["resp" .= usuarios])
-   
 postCadastroR :: Handler TypedContent
 postCadastroR = do
     addHeader "Access-Control-Allow-Origin" "*"
     usuario <- requireJsonBody :: Handler Usuario
     cadastroid <- runDB $ insert usuario
     sendStatusJSON created201 (object ["resp" .= cadastroid])
+
+
+postLoginR :: Handler TypedContent
+postLoginR = do 
+    addHeader "Access-Control-Allow-Origin" "*"
+    usuario <- requireJsonBody :: Handler Usuario
+    usoid <- runDB $ insert usuario
+    sendStatusJSON created201 (object ["resp" .= usoid])
+
+getLoginR :: Handler TypedContent
+getLoginR = do 
+    headers
+    usuarios <- runDB $ selectList [] [Asc UsuarioNome]
+    sendStatusJSON ok200 (object ["resp" .= usuarios])
+    
+    
+--postLogoutR :: Handler TypedContent
+--postLogoutR = do 
+--    addHeader "Access-Control-Allow-Origin" "*"
+--    usuarios <- requireJsonBody :: Handler Login
+--    pidout <- runDB $ insert produto 
+--    sendStatusJSON created201 (object ["resp" .= pid])

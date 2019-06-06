@@ -33,4 +33,4 @@ getProdutosR :: Handler TypedContent
 getProdutosR = do 
     headers
     produtos <- runDB $ selectList [] [Asc ProdutoNome]
-    sendStatusJSON ok200 (object ["resp" .= produtos])
+    sendStatusJSON ok200 (object ["resp" .= produtos])  
